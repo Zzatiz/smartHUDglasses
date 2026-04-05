@@ -1,4 +1,10 @@
-Overview
+<p align="center">
+  <img src="assets/banner.svg" alt="smartHUDglasses banner" width="900"/>
+</p>
+
+# smartHUDglasses
+
+## Overview
 A clip-on heads-up display system designed to augment any standard pair of glasses with real-time visual information overlay. Built using ESP32 microcontroller and wave display technology with a reflective micro-mirror system for seamless integration into the user's field of view.
 Core Features
 Visual Display System

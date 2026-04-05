@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220">
+  <defs>
+    <!-- Dark tech background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1b2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#071020;stop-opacity:1" />
+    </linearGradient>
+    <!-- Cyan accent glow -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#0099cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0" />
+    </linearGradient>
+    <!-- Title gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7ed4f0;stop-opacity:1" />
+    </linearGradient>
+    <!-- HUD panel gradient -->
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#0044aa;stop-opacity:0.06" />
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00d4ff" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+    <!-- Scanline pattern -->
+    <pattern id="scanlines" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#000000" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="220" fill="url(#bgGrad)" rx="10"/>
+  <!-- Grid overlay -->
+  <rect width="900" height="220" fill="url(#grid)" rx="10" opacity="0.6"/>
+  <!-- Scanline overlay -->
+  <rect width="900" height="220" fill="url(#scanlines)" rx="10"/>
+
+  <!-- Corner bracket decorations - top left -->
+  <polyline points="18,44 18,18 44,18" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
+  <!-- Corner bracket - top right -->
+  <polyline points="856,18 882,18 882,44" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
+  <!-- Corner bracket - bottom left -->
+  <polyline points="18,176 18,202 44,202" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
+  <!-- Corner bracket - bottom right -->
+  <polyline points="856,202 882,202 882,176" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
+
+  <!-- Top accent line -->
+  <rect x="60" y="28" width="780" height="1" fill="url(#accentGrad)" opacity="0.5"/>
+  <!-- Bottom accent line -->
+  <rect x="60" y="191" width="780" height="1" fill="url(#accentGrad)" opacity="0.5"/>
+
+  <!-- Left HUD display panel (glasses icon area) -->
+  <rect x="40" y="52" width="180" height="116" rx="6" fill="url(#panelGrad)" stroke="#00d4ff" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- Glasses SVG icon centered in left panel -->
+  <!-- Left lens frame -->
+  <rect x="58" y="90" width="58" height="38" rx="10" fill="none" stroke="#00d4ff" stroke-width="2.2" filter="url(#glow)"/>
+  <!-- Right lens frame -->
+  <rect x="124" y="90" width="58" height="38" rx="10" fill="none" stroke="#00d4ff" stroke-width="2.2" filter="url(#glow)"/>
+  <!-- Bridge -->
+  <path d="M116,109 Q130,104 124,109" fill="none" stroke="#00d4ff" stroke-width="2" />
+  <!-- Left temple arm -->
+  <line x1="58" y1="109" x2="44" y2="106" stroke="#00d4ff" stroke-width="1.8" opacity="0.7"/>
+  <!-- Right temple arm -->
+  <line x1="182" y1="109" x2="196" y2="106" stroke="#00d4ff" stroke-width="1.8" opacity="0.7"/>
+
+  <!-- HUD scan line inside left lens -->
+  <line x1="64" y1="108" x2="110" y2="108" stroke="#00ffcc" stroke-width="1" opacity="0.5"/>
+  <!-- HUD scan line inside right lens -->
+  <line x1="130" y1="108" x2="176" y2="108" stroke="#00ffcc" stroke-width="1" opacity="0.5"/>
+
+  <!-- Inner lens glow fill -->
+  <rect x="60" y="92" width="54" height="34" rx="8" fill="#00d4ff" opacity="0.04"/>
+  <rect x="126" y="92" width="54" height="34" rx="8" fill="#00d4ff" opacity="0.04"/>
+
+  <!-- Lens crosshair reticles -->
+  <circle cx="87" cy="109" r="8" fill="none" stroke="#00ffaa" stroke-width="0.8" opacity="0.6"/>
+  <line x1="87" y1="101" x2="87" y2="117" stroke="#00ffaa" stroke-width="0.6" opacity="0.6"/>
+  <line x1="79" y1="109" x2="95" y2="109" stroke="#00ffaa" stroke-width="0.6" opacity="0.6"/>
+  <circle cx="153" cy="109" r="8" fill="none" stroke="#00ffaa" stroke-width="0.8" opacity="0.6"/>
+  <line x1="153" y1="101" x2="153" y2="117" stroke="#00ffaa" stroke-width="0.6" opacity="0.6"/>
+  <line x1="145" y1="109" x2="161" y2="109" stroke="#00ffaa" stroke-width="0.6" opacity="0.6"/>
+
+  <!-- Panel label bottom -->
+  <text x="130" y="158" font-family="'Courier New', monospace" font-size="8" fill="#00d4ff" opacity="0.7" text-anchor="middle" letter-spacing="2">HUD-ACTIVE</text>
+
+  <!-- Vertical divider line -->
+  <line x1="245" y1="42" x2="245" y2="178" stroke="#00d4ff" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- Main title -->
+  <text x="272" y="92" font-family="'Arial', 'Helvetica Neue', sans-serif" font-size="42" font-weight="700" fill="url(#titleGrad)" filter="url(#softGlow)" letter-spacing="1">smartHUD</text>
+  <text x="272" y="134" font-family="'Arial', 'Helvetica Neue', sans-serif" font-size="42" font-weight="700" fill="url(#titleGrad)" filter="url(#softGlow)" letter-spacing="1">glasses</text>
+
+  <!-- Subtitle / tagline -->
+  <text x="273" y="156" font-family="'Courier New', monospace" font-size="12" fill="#7ed4f0" opacity="0.85" letter-spacing="3">AR HEADS-UP DISPLAY  |  ESP32  |  EDGE AI</text>
+
+  <!-- Right side: feature tags panel -->
+  <rect x="700" y="52" width="160" height="116" rx="6" fill="url(#panelGrad)" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Feature tag items -->
+  <!-- Tag 1: Facial Recognition -->
+  <rect x="712" y="63" width="136" height="18" rx="3" fill="#00d4ff" opacity="0.1"/>
+  <text x="720" y="76" font-family="'Courier New', monospace" font-size="9.5" fill="#00d4ff" opacity="0.9" letter-spacing="0.5">&#9632; FACIAL RECOGNITION</text>
+
+  <!-- Tag 2: Object ID -->
+  <rect x="712" y="85" width="136" height="18" rx="3" fill="#00d4ff" opacity="0.06"/>
+  <text x="720" y="98" font-family="'Courier New', monospace" font-size="9.5" fill="#00d4ff" opacity="0.9" letter-spacing="0.5">&#9632; OBJECT DETECTION</text>
+
+  <!-- Tag 3: Speech-to-Text -->
+  <rect x="712" y="107" width="136" height="18" rx="3" fill="#00d4ff" opacity="0.1"/>
+  <text x="720" y="120" font-family="'Courier New', monospace" font-size="9.5" fill="#00d4ff" opacity="0.9" letter-spacing="0.5">&#9632; SPEECH-TO-TEXT</text>
+
+  <!-- Tag 4: FreeRTOS -->
+  <rect x="712" y="129" width="136" height="18" rx="3" fill="#00d4ff" opacity="0.06"/>
+  <text x="720" y="142" font-family="'Courier New', monospace" font-size="9.5" fill="#00d4ff" opacity="0.9" letter-spacing="0.5">&#9632; FreeRTOS / TF LITE</text>
+
+  <!-- Tag 5: Encrypted -->
+  <rect x="712" y="151" width="136" height="18" rx="3" fill="#00d4ff" opacity="0.1"/>
+  <text x="720" y="164" font-family="'Courier New', monospace" font-size="9.5" fill="#00ffaa" opacity="0.9" letter-spacing="0.5">&#9632; E2E ENCRYPTED</text>
+
+  <!-- Status indicator dots (top right area) -->
+  <circle cx="845" y="32" r="4" fill="#00ff88" opacity="0.9" cx="845" cy="32" filter="url(#glow)"/>
+  <text x="832" y="36" font-family="'Courier New', monospace" font-size="8" fill="#00ff88" opacity="0.8" text-anchor="end">ONLINE</text>
+
+  <!-- Decorative data stream lines -->
+  <line x1="250" y1="170" x2="695" y2="170" stroke="#00d4ff" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,6"/>
+</svg>
