@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="smartHUDglasses banner" width="900"/>
+  <img src="photo_2026-01-25_16-58-44.jpg" alt="smartHUDglasses banner" width="900"/>
 </p>
 
 # smartHUDglasses
